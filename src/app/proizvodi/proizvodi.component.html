@@ -1,0 +1,21 @@
+<div class="col-10 container-fluid py-3">
+<div class="justify-content-left">
+<div *ngFor="let proizvod of proizvodi; let i=index" class="card mb-2 d-flex justify-content-center" >
+  <div class="row text-center">
+    <div class="col-md-3 ">
+      <img src="{{'data:image/jpg;base64,' + proizvod.slika}}" class="img-thumbnail img-fluid rounded-start" />
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <h5 class="card-title">{{proizvod.ime}}</h5>
+        <p class="card-text">{{proizvod.opis}}</p>
+        <h4 class="card-text"><small class="text-muted">Cijena: {{proizvod.cijena}} km</small></h4>
+        <br>
+        <p class="align-items-right"><button type="button" class="btn btn-outline-dark btn-sm" routerLink="/kontakt">Više informacija</button></p>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+

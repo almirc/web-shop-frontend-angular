@@ -1,0 +1,61 @@
+
+
+<hr>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <br>
+<div class="app flex-row align-items-center">
+      <div class="row ">
+          <div class="col-md-3" *ngFor="let proizvod of proizvodi; let i = index">
+<div *ngIf="i<(4)" class="card shadow p-3 mb-5 bg-body rounded" >
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    Novo
+  </span>
+    <img src="{{'data:image/jpg;base64,' + proizvod.slika}}"  class="card-img-top" alt="...">
+    <h5 class="card-title">{{proizvod.ime}}</h5>
+        <p class="card-text">{{proizvod.opis}}</p>
+        <h4 class="card-text"><small class="text-muted">Cijena: {{proizvod.cijena}} km</small></h4>
+      <p class="card-body text-center">
+        <button type="button" class="btn btn-outline-dark position-relative" routerLink="/kontakt">
+          Više informacija
+        </button>
+      </p>
+
+  </div>
+  </div>
+</div>
+</div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <br>
+      <div class="app flex-row align-items-center ">
+            <div class="row ">
+                <div class=" col-md-3 " *ngFor="let proizvod of proizvodi; let i = index">
+      <div *ngIf="i>(3) or i<(7)" class="card shadow p-3 mb-5 bg-body rounded " >
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          Novo
+        </span>
+          <img src="{{'data:image/jpg;base64,' + proizvod.slika}}"  class="card-img-top" alt="...">
+          <h5 class="card-title">{{proizvod.ime}}</h5>
+          <p class="card-text">{{proizvod.opis}}</p>
+          <h4 class="card-text"><small class="text-muted">Cijena: {{proizvod.cijena}} km</small></h4>
+            <p class="card-body text-center">
+              <button type="button" class="btn btn-outline-dark position-relative" routerLink="/kontakt">
+                Više informacija
+              </button>
+            </p>
+
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

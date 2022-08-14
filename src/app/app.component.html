@@ -1,0 +1,74 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ 'show': isCollapsed }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item  ">
+          <a class="nav-link " routerLink="/"><h6>Početna</h6></a>
+        </li>
+        <li class="nav-item  ">
+          <a class="nav-link " routerLink="/proizvodi"><h6>Noževi</h6></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/kontakt" ><h6>Kontakt</h6></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/onama" ><h6>O nama</h6></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-social-icons ">
+    <ul class="social-icons text-center">
+        <li><a href="" class="social-icon"> <i class="fa fa-facebook rounded"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-twitter rounded"></i></a></li>
+        <li><a href="" class="social-icon"> <i class="fa fa-youtube rounded"></i></a></li>
+
+    </ul>
+  </div>
+</nav>
+<div class="col-12 container-fluid py-3 ">
+      <router-outlet></router-outlet>
+      <br>
+      <hr>
+      <div class="col-8 container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card border-0" style="width: 16rem;">
+              <img src="assets\Delivery-icon-01.png" style="width: 9rem" class="card-img-top container-fluid" alt="...">
+              <div class="card-body">
+                <p class="card-text">Nudimo besplatnu dostavu za narudžbe iznad 100 KM. Naši proizvodi se često isporučuju isti dan kada su naručeni, tako da ćete brzo dobiti svoj novi nož.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0" style="width: 16rem;">
+              <img src="assets\money.png" style="width: 9rem" class="card-img-top container-fluid" alt="...">
+              <div class="card-body">
+                <p class="card-text">Ako niste zadovoljni svojim novim nožem, nismo ni mi.
+                  Nudimo vam 100% garanciju povrata novca u roku od 60 dana bez pitanja.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0" style="width: 16rem;">
+              <img src="assets\ico-sac-medium.png" style="width: 9rem" class="card-img-top container-fluid" alt="...">
+              <div class="card-body">
+                <p class="card-text">Naš vrhunski tim za korisničku podršku možete kontaktirati putem <a href="/kontakt">kontakt</a> forme kako bismo u bilo kojem trenutku odgovorili vašim zahtjevima.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="text-center text-white p-3 navbar-expand-lg navbar-dark bg-dark">
+  © 2022 Copyright: Almir Čusto
+  <a class="text-white" routerLink="/">Web Shop</a>
+
+</div>
+</div>
+</div>

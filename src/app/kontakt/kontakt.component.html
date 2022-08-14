@@ -1,0 +1,69 @@
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+  <div class="col container-fluid py-3">
+  <form #addForm="ngForm" (ngSubmit)="onAddKontakt(addForm)">
+    <div class="form-group">
+      <label for="ime">Ime</label>
+      <input required minlength="3" maxlength="10" ngModel name="ime" type="text" #ime="ngModel" class="form-control" id="ime" placeholder="Unesite vaše ime...">
+      <div class="alert-danger" *ngIf="ime.touched && !ime.valid">
+          <div *ngIf="ime.errors && ime.errors['required']">Molimo unesite vaše ime.</div>
+          <div *ngIf="ime.errors && ime.errors['minlength']">Ime mora da sadrži minimalno {{ ime.errors && ime.errors['minlength'].requiredLength }} karaktera.</div>
+          <div *ngIf="ime.errors && ime.errors['maxlength']">First Name is maximum 10 character.</div>
+      </div>
+  </div>
+  <div class="form-group">
+    <label for="prezime">Prezime</label>
+    <input required minlength="3" maxlength="10" ngModel name="prezime" type="text" #prezime="ngModel" class="form-control" id="prezime" placeholder="Unesite vaše prezime...">
+    <div class="alert-danger" *ngIf="prezime.touched && !prezime.valid">
+        <div *ngIf="prezime.errors && prezime.errors['required']">Molimo unesite vaše prezime.</div>
+        <div *ngIf="prezime.errors && prezime.errors['minlength']">Prezime mora da sadrži minimalno {{ prezime.errors && prezime.errors['minlength'].requiredLength }} karaktera.</div>
+        <div *ngIf="prezime.errors && prezime.errors['maxlength']">First Name is maximum 10 character.</div>
+    </div>
+</div>
+<div class="form-group">
+  <label for="telefon">Broj telefona</label>
+  <input required minlength="10" maxlength="20" ngModel name="telefon" type="number" #telefon="ngModel" class="form-control" id="telefon" placeholder="Unesite vaš broj telefona...">
+  <div class="alert-danger" *ngIf="telefon.touched && !telefon.valid">
+      <div *ngIf="telefon.errors && telefon.errors['required']">Molimo unesite vaš broj telefona.</div>
+      <div *ngIf="telefon.errors && telefon.errors['minlength']">Broj mora da sadrži minimalno {{ telefon.errors && telefon.errors['minlenght'].requiredLength }} karaktera.</div>
+      <div *ngIf="telefon.errors && telefon.errors['maxlength']">First Name is maximum 10 character.</div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="eMail">e-mail</label>
+  <input required minlength="3" maxlength="15" ngModel name="eMail" type="text"  #eMail="ngModel" class="form-control" id="eMail" placeholder="Unesite vaš email...">
+  <div class="alert-danger" *ngIf="eMail.touched && !eMail.valid">
+      <div *ngIf="eMail.errors && eMail.errors['required']">Molimo unesite vašu e-mail adresu.</div>
+      <div *ngIf="eMail.errors && eMail.errors['minlength']">First Name is minimum {{ eMail.errors && eMail.errors['minlength'].requiredLength }} character.</div>
+      <div *ngIf="eMail.errors && eMail.errors['maxlength']">First Name is maximum 10 character.</div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="poruka">Poruka</label>
+  <input required minlength="5" maxlength="500" ngModel name="poruka" type="text"  #poruka="ngModel" class="form-control" id="poruka" placeholder="Unesite vašu poruku...">
+  <div class="alert-danger" *ngIf="poruka.touched && !poruka.valid">
+      <div *ngIf="poruka.errors && poruka.errors['required']">Molimo unesite vašu poruku</div>
+      <div *ngIf="poruka.errors && poruka.errors['minlength']">First Name is minimum {{ poruka.errors && poruka.errors['minlength'].requiredLength }} character.</div>
+      <div *ngIf="poruka.errors && poruka.errors['maxlength']">First Name is maximum 10 character.</div>
+  </div>
+</div>
+    <div class="modal-footer">
+
+       <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Pošalji</button>
+    </div>
+    </form>
+    </div>
+        </div>
+        <div class="col text-center container-fluid py-3">
+          <br>
+  99% narudžbi šalje se isti dan kada su narudžbe primljene.
+  Ako narudžba ne bude poslana isti dan kada je primljena, ona će biti poslana 24-72 sata nakon zaprimanja narudžbe. Nudimo besplatnu dostavu za sve narudžbe u BiH iznad 100 km ili više.
+  Kupci imaju mogućnost odabrati određene opcije dostave ako želite prilikom narudžbe.
+  Nudimo široku paletu mogućnosti dostave kako bi najbolje odgovarale vašim potrebama.
+        </div>
+      </div>
+    </div>
+

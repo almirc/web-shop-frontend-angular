@@ -1,0 +1,11 @@
+<div *ngFor="let poruka of kontakti; let i = index" class="card">
+  <div class="card-header">
+
+    <p>Narudžba broj: {{poruka.id}}</p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Ime: {{poruka.ime}}<br> Prezime: {{poruka.prezime}} <br>Email: {{poruka.eMail}} <br> Broj telefona: {{poruka.telefon}}</h5>
+    <p class="card-text">Poruka:{{poruka.poruka}}</p>
+    <button (click)="onDeleteKontakt(poruka.id)" class="btn btn-primary">Obriši</button>
+  </div>
+</div>
